@@ -1,6 +1,7 @@
 -- Pergunta A: Quantos funcionários aposentados estão atualmente ativos na empresa?
 CREATE VIEW vw_aposentados_ativos AS
-SELECT COUNT(*) AS total_aposentados_ativos
+SELECT 
+COUNT(*) AS total_aposentados_ativos
 FROM funcionarios
 WHERE aposentado = 'S' AND status = 'A';
 
@@ -134,8 +135,10 @@ WHERE p.tipo_ocorrencia IN ('Falta', 'Atraso')
   );
   
 SELECT 
-COUNT(*) AS total_ocorrencias_carnaval
-FROM vw_ocorrencias_carnaval;
+YEAR(data_referencia) AS ano, 
+COUNT(*) AS total_ocorrencias_carnaval 
+FROM vw_ocorrencias_carnaval 
+GROUP BY YEAR(data_referencia);
   
 SELECT 
 nome_funcionario, 
@@ -169,7 +172,7 @@ total_admissoes,
 total_desligamentos,
 taxa_turnover
 FROM vw_indicadores_turnover
-WHERE ano >= YEAR(CURDATE()) - 5
+WHERE ano >= YEAR(CURDATE()) - 4
 ORDER BY ano DESC;
 
 --  Pergunta I: Quais treinamentos corporativos tiveram maior participação dos colaboradores?
