@@ -2,17 +2,17 @@
 
 Este repositório contém o projeto de modelação e implementação de um Banco de Dados Relacional voltado para a Gestão de Recursos Humanos (sistema_rh). O projeto foi desenvolvido como requisito prático e avaliativo para a disciplina de Banco de Dados I do curso de Engenharia da Computação da UNIVAP (Universidade do Vale do Paraíba).
 
-🗺️ Modelo Entidade-Relacionamento (MER)
+## 🗺️ Modelo Entidade-Relacionamento (MER)
 
 O diagrama abaixo ilustra a arquitetura lógica do banco de dados, evidenciando as tabelas, as respetivas chaves primárias (PK), chaves estrangeiras (FK) e a integridade referencial do ecossistema:
 
 ![alt text](image.png)
 
-📂 Arquitetura das Tabelas
+## 📂 Arquitetura das Tabelas
 
 O banco de dados é composto por 14 tabelas normalizadas para mitigar redundâncias e inconsistências de dados:
 
-🏢 1. Estrutura Organizacional (Tabelas de Domínio)
+### 🏢 1. Estrutura Organizacional (Tabelas de Domínio)
 
 departamento: Centraliza os setores macro da empresa (ex: TI, Financeiro, Marketing).
 
@@ -22,11 +22,11 @@ cargo: Catálogo de cargos e os respetivos níveis hierárquicos (Operacional, P
 
 turno: Define as escalas de trabalho e horários de entrada e saída.
 
-👤 2. Cadastro Geral
+### 👤 2. Cadastro Geral
 
 funcionarios: Tabela central do sistema, agregando dados pessoais (nome, CPF, telefone, email, status) e chaves estrangeiras para cargo, turno e setor.
 
-⏱️ 3. Histórico e Operação Diária
+### ⏱️ 3. Histórico e Operação Diária
 
 historico_vinculos: Regista os contratos do colaborador ao longo do tempo (CLT, PJ, Temporário, Estágio), permitindo rastrear colaboradores ativos e inativos (data_saida).
 
@@ -38,19 +38,19 @@ folha_de_ponto: Registo diário de ponto, mapeando atrasos, horas extraordinári
 
 ferias: Controlo de períodos de descanso agendados, gozados ou cancelados.
 
-🎯 4. Recrutamento e Seleção (R&S)
+### 🎯 4. Recrutamento e Seleção (R&S)
 
 processo_seletivo: Registo de campanhas de contratação com datas de abertura e encerramento.
 
 vagas: Postos de trabalho abertos atrelados a cada processo seletivo.
 
-📚 5. Capacitação e Desenvolvimento
+### 📚 5. Capacitação e Desenvolvimento
 
 treinamento: Catálogo de cursos e formações disponibilizados pela empresa.
 
 inter_funcionario_treinamento: Tabela associativa ($N:M$) que mapeia quais os funcionários que participaram de cada treinamento.
 
-📈 Inteligência de Negócio (People Analytics)
+## 📈 Inteligência de Negócio (People Analytics)
 
 A estrutura lógica do sistema foi concebida para fornecer relatórios gerenciais complexos e automatizados através do uso de Views (Vistas), resolvendo desafios de RH como:
 
@@ -65,7 +65,7 @@ Equidade e Média Salarial: Cruzamento de médias de remunerações agrupadas po
 
 Planeamento de Escalas: Projeção de ausências programadas por férias num horizonte de 60 dias para evitar furos na operação.
 
-🛠️ Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 SGBD: MySQL Server 8.0
 
