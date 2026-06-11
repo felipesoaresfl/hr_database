@@ -1,12 +1,12 @@
 # hr_database
 
-![alt text](image.png)
-
 Este repositório contém o projeto de modelação e implementação de um Banco de Dados Relacional voltado para a Gestão de Recursos Humanos (sistema_rh). O projeto foi desenvolvido como requisito prático e avaliativo para a disciplina de Banco de Dados I do curso de Engenharia da Computação da UNIVAP (Universidade do Vale do Paraíba).
 
 🗺️ Modelo Entidade-Relacionamento (MER)
 
 O diagrama abaixo ilustra a arquitetura lógica do banco de dados, evidenciando as tabelas, as respetivas chaves primárias (PK), chaves estrangeiras (FK) e a integridade referencial do ecossistema:
+
+![alt text](image.png)
 
 📂 Arquitetura das Tabelas
 
